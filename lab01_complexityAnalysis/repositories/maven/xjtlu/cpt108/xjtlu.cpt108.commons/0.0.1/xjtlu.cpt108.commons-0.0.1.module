@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "xjtlu.cpt108",
+    "module": "xjtlu.cpt108.commons",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "xjtlu.cpt108.commons-0.0.1.jar",
+          "url": "xjtlu.cpt108.commons-0.0.1.jar",
+          "size": 20495,
+          "sha512": "762bb812656cdf1840c7c0619216d9d0ab6963d8544ca26630df03620ade0015178426089c70c256df1342d8f23b34b1c0440f141b627197be297604e0ef9d42",
+          "sha256": "35e26d2d1c028afd3239c738b40097a760f16910c170fd5742bd6130524bf223",
+          "sha1": "9c3b204253edfd0f3c1b6060f13ce0408a23e39a",
+          "md5": "d49d2410ed187cfcb3f95189ec914597"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xjtlu.cpt108.commons-0.0.1.jar",
+          "url": "xjtlu.cpt108.commons-0.0.1.jar",
+          "size": 20495,
+          "sha512": "762bb812656cdf1840c7c0619216d9d0ab6963d8544ca26630df03620ade0015178426089c70c256df1342d8f23b34b1c0440f141b627197be297604e0ef9d42",
+          "sha256": "35e26d2d1c028afd3239c738b40097a760f16910c170fd5742bd6130524bf223",
+          "sha1": "9c3b204253edfd0f3c1b6060f13ce0408a23e39a",
+          "md5": "d49d2410ed187cfcb3f95189ec914597"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "xjtlu.cpt108.commons-0.0.1-javadoc.jar",
+          "url": "xjtlu.cpt108.commons-0.0.1-javadoc.jar",
+          "size": 195746,
+          "sha512": "3d0f984935fe964e61c418c9bf561fde133a5cba85f0f7d4a4c8674c43af2a3f54516fada2a405045dab4f56dc22f0fd584cf5841142163da2bd18d250bff4f8",
+          "sha256": "31082829c49375805dd036447d56ead8fc7935cc3e72ece4d6361b8af4a68e13",
+          "sha1": "1895c6cd98c43d74930c60637491249197bf101b",
+          "md5": "e10506096f94a275225825c345e7f81f"
+        }
+      ]
+    }
+  ]
+}

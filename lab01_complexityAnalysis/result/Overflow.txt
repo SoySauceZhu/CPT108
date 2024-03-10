@@ -1,0 +1,134 @@
+> Configure project :
+localMavenRepository folder exist
+
+> Task :run
+Data Scale : 2
+Data Scale : 4
+Data Scale : 8
+Data Scale : 16
+Data Scale : 32
+Data Scale : 64
+Data Scale : 128
+Data Scale : 256
+Data Scale : 512
+Data Scale : 1024
+Data Scale : 2048
+Data Scale : 4096
+Data Scale : 8192
+Data Scale : 16384
+Data Scale : 32768
+Data Scale : 65536
+Data Scale : 131072
+Data Scale : 262144
+Data Scale : 524288
+Data Scale : 1048576
+Data Scale : 2097152
+Data Scale : 4194304
+Data Scale : 8388608
+Data Scale : 16777216
+Data Scale : 33554432
+Data Scale : 67108864
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.stream.ReferencePipeline.lambda$toArray$0(ReferencePipeline.java:622)
+        at java.base/java.util.stream.ReferencePipeline$$Lambda$2/0x000002b457c44258.apply(Unknown Source)
+        at java.base/java.util.stream.SpinedBuffer.asArray(SpinedBuffer.java:214)
+        at java.base/java.util.stream.Nodes$SpinedNodeBuilder.asArray(Nodes.java:1296)
+        at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:617)
+        at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+        at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+        at xjtlu.cpt108.util.sort.AbstractSorter.sort(AbstractSorter.java:115)
+        at xjtlu.cpt108.util.sort.AbstractSorter.sort(AbstractSorter.java:141)
+        at xjtlu.cpt108.complexity.SortingHelper.heapOverflowTest(SortingHelper.java:162)
+        at xjtlu.cpt108.complexity.Task4.main(Task4.java:5)
+
+> Task :run FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command 'C:\Program Files\Java\jdk-20\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 3m 14s
+2 actionable tasks: 1 executed, 1 up-to-date
+
+
+
+> Configure project :
+localMavenRepository folder exist
+
+> Task :run
+Data Scale : 2
+Data Scale : 4
+Data Scale : 8
+Data Scale : 16
+Data Scale : 32
+Data Scale : 64
+Data Scale : 128
+Data Scale : 256
+Data Scale : 512
+Data Scale : 1024
+Data Scale : 2048
+Data Scale : 4096
+Data Scale : 8192
+Data Scale : 16384
+Data Scale : 32768
+Data Scale : 65536
+Data Scale : 131072
+Data Scale : 262144
+Data Scale : 524288
+Data Scale : 1048576
+Data Scale : 2097152
+Data Scale : 4194304
+Data Scale : 8388608
+Data Scale : 16777216
+Data Scale : 33554432
+Data Scale : 67108864
+Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.base/java.util.stream.ReferencePipeline.lambda$toArray$0(ReferencePipeline.java:622)
+        at java.base/java.util.stream.ReferencePipeline$$Lambda$2/0x0000021190044258.apply(Unknown Source)
+        at java.base/java.util.stream.SpinedBuffer.asArray(SpinedBuffer.java:214)
+        at java.base/java.util.stream.Nodes$SpinedNodeBuilder.asArray(Nodes.java:1296)
+        at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:617)
+        at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+        at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+        at xjtlu.cpt108.util.sort.AbstractSorter.sort(AbstractSorter.java:115)
+        at xjtlu.cpt108.util.sort.AbstractSorter.sort(AbstractSorter.java:141)
+        at xjtlu.cpt108.complexity.SortingHelper.mergeOverflowTest(SortingHelper.java:181)
+        at xjtlu.cpt108.complexity.Task4.main(Task4.java:5)
+
+> Task :run FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':run'.
+> Process 'command 'C:\Program Files\Java\jdk-20\bin\java.exe'' finished with non-zero exit value 1
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 58s
+2 actionable tasks: 1 executed, 1 up-to-date
+

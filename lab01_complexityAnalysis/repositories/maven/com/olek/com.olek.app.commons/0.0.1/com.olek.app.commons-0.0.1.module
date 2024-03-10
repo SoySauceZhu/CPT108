@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.olek",
+    "module": "com.olek.app.commons",
+    "version": "0.0.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "com.olek.app.commons-0.0.1.jar",
+          "url": "com.olek.app.commons-0.0.1.jar",
+          "size": 93913,
+          "sha512": "f590f3cf42457562a34f1eef2afce6eb2a4e5771b3d0839a4f82e0417323ceda264fc74f94acf2c12dc8176ae8094acef533e0993d338cc31b30074e2b2d9d15",
+          "sha256": "b0968169a15d50115544c54fa005d9b4f8b8c777e957fe946cf4b7f66d702d38",
+          "sha1": "65d9d0e38c4ca4381b382d875036cdf0c912533c",
+          "md5": "5445ed91509955da05133993c86ee7de"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "com.olek.app.commons-0.0.1.jar",
+          "url": "com.olek.app.commons-0.0.1.jar",
+          "size": 93913,
+          "sha512": "f590f3cf42457562a34f1eef2afce6eb2a4e5771b3d0839a4f82e0417323ceda264fc74f94acf2c12dc8176ae8094acef533e0993d338cc31b30074e2b2d9d15",
+          "sha256": "b0968169a15d50115544c54fa005d9b4f8b8c777e957fe946cf4b7f66d702d38",
+          "sha1": "65d9d0e38c4ca4381b382d875036cdf0c912533c",
+          "md5": "5445ed91509955da05133993c86ee7de"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "com.olek.app.commons-0.0.1-javadoc.jar",
+          "url": "com.olek.app.commons-0.0.1-javadoc.jar",
+          "size": 448166,
+          "sha512": "4aef59f215c2c42bc3fe3446a9c421d07cc0e85d8d080e3e63b9ab18dff056853aefa256aed954bcd565ea5fcf2e5791266506fe0699c05dda2eeaa9f9bb35df",
+          "sha256": "35552d4ace20ad51e226dee656a5dea8e8e0eeadb21e9b95491d1eaf4b9bd19a",
+          "sha1": "87b29c2b5881220a61ef0e8754fc5df712b21c7f",
+          "md5": "0e13f5416ffc934d754b7b38bb40bf92"
+        }
+      ]
+    }
+  ]
+}
