@@ -6,7 +6,7 @@ Performance of four sorting methods are tested in this lab session, including bu
 ## Result
 1. Ascending Integer List
 
-![](Ascending.png)
+![](../plot/Ascending.png)
 
 
 Merge and Heap sort hold runtime complexity of $O(n log n)$ under any cases, showing a good and stable performance in different scenarios. 
@@ -18,7 +18,7 @@ Selection sort has a complexity of $O(n^2)$ in any cases, as well as the list wi
 
 2. Descending Integer List
 
-![](Descending.png)
+![](../plot/Descending.png)
 
 Even though that both bubble and selection sort have complexity of $O(n^2)$, it's still clear in the result that selection sort performs much better than bubble sort. The reason is that selection sort implements less swap operation compared to bubble. It only swap once for arranging the i-th smallest items, yet bubble sort need to do at most n-th times each time (n is the length of list).
 
@@ -26,7 +26,7 @@ Merge and heap sort, as mentioned before, performed really well as the average a
 
 3. Random Integer List
 
-![](Random.png)
+![](../plot/Random.png)
 
 Bubble sort performs worst in this case, as mentioned before, the reason is that the swapping operation need to be executed more times than selection sort although both the complexity is $O(n^2)$. And the random input reflects a better asymptote to average time complexity.
 
@@ -34,7 +34,7 @@ Merge and heap sort, even though contains a number of swap, still performs signi
 
 4. Radom String List
 
-![](String.png)
+![](../plot/String.png)
 
 Being compare with other input types, `String` is a reference type, requiring one more step of referencing the memory location when doing swap or any other assignment. Therefore, the run time of each algorithm is much greater than what they performed in other cases.
 
