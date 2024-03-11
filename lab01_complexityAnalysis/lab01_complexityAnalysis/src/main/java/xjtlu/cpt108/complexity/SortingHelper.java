@@ -161,22 +161,24 @@ public class SortingHelper {
 
     private static <T extends Comparable<? super T>> long timeOfSort(Sort sorter, Collection<T> input) {
         System.nanoTime();
+        System.out.println("Start Sorting : " + input.size());
         long start = System.nanoTime();
         sorter.sort(input);
         long end = System.nanoTime();
+        System.out.println("Sorting success");
         return (end - start) / 1000000;
     }
 
     public static void heapOverflowTest() {
         Sort sorter = new HeapSort();
 //        int num = 1;
-        int num = 1;
+        int num = 33554432;
         while (true) {
-            num = num * 2;
+            num = num + 1000000;
             List<Integer> input = DataPre.randomList(num);
+            System.out.println("Generated : scale of " + input.size());
 
             try {
-                System.out.println("Data Scale : " + num);
                 sorter.sort(input);
             } catch (StackOverflowError e) {
                 System.out.println(e.getMessage());
@@ -189,13 +191,13 @@ public class SortingHelper {
     public static void mergeOverflowTest() {
         Sort sorter = new MergeSort();
 //        int num = 1;
-        int num = 67108864;
+        int num = 33554432;
         while (true) {
-            num = num + 100000;
+            num = num + 1000000;
             List<Integer> input = DataPre.randomList(num);
+            System.out.println("Generated : scale of " + input.size());
 
             try {
-                System.out.println("Data Scale : " + num);
                 sorter.sort(input);
             } catch (StackOverflowError e) {
                 System.out.println(e.getMessage());
@@ -205,6 +207,43 @@ public class SortingHelper {
 
     }
 
+    public static void bubbleOverflowTest() {
+        Sort sorter = new BubbleSort();
+//        int num = 1;
+        int num = 33554432;
+        while (true) {
+            num = num + 1000000;
+            List<Integer> input = DataPre.ascendingList(num);
+            System.out.println("Generated : scale of " + input.size());
+
+            try {
+                sorter.sort(input);
+            } catch (StackOverflowError e) {
+                System.out.println(e.getMessage());
+            }
+
+        }
+
+    }
+
+    public static void selectionOverflowTest() {
+        Sort sorter = new SelectionSort();
+//        int num = 1;
+        int num = 32768;
+        while (true) {
+            num = num * 2;
+            List<Integer> input = DataPre.randomList(num);
+            System.out.println("Generated : scale of " + input.size());
+
+            try {
+                sorter.sort(input);
+            } catch (StackOverflowError e) {
+                System.out.println(e.getMessage());
+            }
+
+        }
+
+    }
 
     public static void main(String[] args) {
         System.out.println("Ascending : " + ascending());

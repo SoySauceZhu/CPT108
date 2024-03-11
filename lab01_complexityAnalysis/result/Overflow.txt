@@ -132,3 +132,35 @@ For more on this, please refer to https://docs.gradle.org/8.5/userguide/command_
 BUILD FAILED in 1m 58s
 2 actionable tasks: 1 executed, 1 up-to-date
 
+
+> Configure project :
+localMavenRepository folder exist
+
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+
+> Task :run
+Data Scale : 65536
+Data Scale : 131072
+Data Scale : 262144
+Data Scale : 524288
+
+
+
+
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+------------------------------------------------------
+
+Heap
+Generated : scale of 34554432
+Generated : scale of 35554432
+Generated : scale of 36554432
+Generated : scale of 37554432
+Generated : scale of 38554432
+Generated : scale of 39554432
+Generated : scale of 40554432
+Generated : scale of 41554432
+ 

@@ -4,7 +4,7 @@ Performance of four sorting methods are tested in this lab session, including bu
 
 
 ## Result
-1. Ascending Integer List
+### 1. Ascending Integer List
 
 ![](Ascending.png)
 
@@ -16,7 +16,7 @@ Theoretically, bubble sorting under random case holds a complexity of $O(n^2)$. 
 Selection sort has a complexity of $O(n^2)$ in any cases, as well as the list with original ascending order. The ratio of growth of this algorithm burgeons at a great speed, which is nearly unusable in practice. Meanwhile, unlike bubble sort, selection sort doesn't improve in the best-case scenario because it always scans the entire array for the minimum element.
 
 
-2. Descending Integer List
+### 2. Descending Integer List
 
 ![](Descending.png)
 
@@ -24,7 +24,7 @@ Even though that both bubble and selection sort have complexity of $O(n^2)$, it'
 
 Merge and heap sort, as mentioned before, performed really well as the average and worst-case complexity $O(n log n)$ indicated.
 
-3. Random Integer List
+### 3. Random Integer List
 
 ![](Random.png)
 
@@ -32,13 +32,13 @@ Bubble sort performs worst in this case, as mentioned before, the reason is that
 
 Merge and heap sort, even though contains a number of swap, still performs significantly better than other algorithms.
 
-4. Radom String List
+### 4. Radom String List
 
 ![](String.png)
 
 Being compare with other input types, `String` is a reference type, requiring one more step of referencing the memory location when doing swap or any other assignment. Therefore, the run time of each algorithm is much greater than what they performed in other cases.
 
-5. Small Size List
+### 5. Small Size List
 
 When the scale of the input is quite small, the timing comparison between different sorting algorithms may not show significant differences, especially for simple algorithms like bubble sort and selection sort. This is because their time complexities are quadratic, meaning they have poor performance for large datasets but can perform relatively well on small datasets.
 
@@ -47,6 +47,26 @@ When the scale of the input is quite small, the timing comparison between differ
 ![](Random2.png)
 ![](Repeated2.png)
 ![](String2.png)
+
+### 6. Memory Consumption
+
+* Bubble Sort
+
+Bubble sort typically requires only a constant amount of additional memory because it sorts the array in place. It doesn't require any additional data structures besides the array itself. 
+However, due to the limitation of its time complexity, the process is unusably slow that even after an hour of running, JVM still not pops memory overflow. The last log message indicates it could successfully sort array of size 524,288. 
+
+* Selection Sort
+
+Selection sort also sorts the array in place and doesn't require additional memory besides the array itself. Similar to bubble sort, it has a constant memory consumption. Same as mentioned before, the runtime is way too long to generate a overflow error, the last successful log is for list of size 1,048,576.
+
+* Merge Sort
+
+It requires additional memory location for arrays when recursively divide and sort the arrays. The number of sub-arrays is proportional to the array size because at the end of the day, the minimum arrays have fix length of 1. JVM could handle sorting of an array of size at most 33,554,432 before memory overflow occurs.
+
+* Heap Sort
+
+In a binary tree, each value is stores in a node structure, what the sorting does is swapping the references of different nodes in the tree. So it has a really good space complexity performance. As the result of really efficient runtime complexity, JVM reports a memory overflow error when sorting an array of size 47,554,432. The running time is 1m 58s.
+
 ## Code
 > Reference: https://github.com/SoySauceZhu/CPT108
 

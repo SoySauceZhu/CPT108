@@ -8,9 +8,9 @@ plugins {
 
 ext {
     // mainModuleName = 'xjtlu.cpt108lab.complexityAnalysis'
-    mainClassName = 'xjtlu.cpt108.complexity.SortingSamples'
+//    mainClassName = 'xjtlu.cpt108.complexity.SortingSamples'
 //    mainClassName = 'xjtlu.cpt108.complexity.Task2'
-//    mainClassName = 'xjtlu.cpt108.complexity.Task4'
+    mainClassName = 'xjtlu.cpt108.complexity.Task4'
 }
 
 defaultTasks 'clean', 'compileJava', 'compileTestJava', 'test'
