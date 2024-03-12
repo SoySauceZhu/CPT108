@@ -11,7 +11,7 @@ public class DataPre {
     public static List<Integer> ascendingList(int num) {
         List<Integer> list = new ArrayList<>();
         for (int i = 0; i < num; i++) {
-            list.add(2 * i + 1);
+            list.add(2 * i + 11);
         }
         return list;
     }

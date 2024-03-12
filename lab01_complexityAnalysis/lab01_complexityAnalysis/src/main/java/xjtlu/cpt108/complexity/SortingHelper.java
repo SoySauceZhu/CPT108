@@ -5,6 +5,7 @@ import xjtlu.cpt108.util.sort.*;
 import java.util.*;
 
 public class SortingHelper {
+    public static int max_len;
 
 
     private static final List<Sort> sorts = new ArrayList<>(List.of(new BubbleSort(), new SelectionSort(), new MergeSort(), new HeapSort()));
@@ -59,10 +60,11 @@ public class SortingHelper {
             Sort sorter = sorts.get(i);
             List<Long> list = new ArrayList<>();
 
+//            timeOfSort(sorter, DataPre.ascendingList(10));
 
             // The iteration time `j` could be revised for various cases
 
-            for (int j = 1; j < 25000; j += 1000) {
+            for (int j = 1; j < 150; j += 5) {
                 List<Integer> origin_data = DataPre.ascendingList(j);
 
                 list.add(timeOfSort(sorter, origin_data));
@@ -171,8 +173,7 @@ public class SortingHelper {
 
     public static void heapOverflowTest() {
         Sort sorter = new HeapSort();
-//        int num = 1;
-        int num = 33554432;
+        int num = 33554432;     // the size of list data
         while (true) {
             num = num + 1000000;
             List<Integer> input = DataPre.randomList(num);
@@ -247,10 +248,6 @@ public class SortingHelper {
 
     public static void main(String[] args) {
         System.out.println("Ascending : " + ascending());
-        System.out.println("Descending : " + descending());
-        System.out.println("Random : " + random());
-        System.out.println("Repeated : " + repeated());
-        System.out.println("Random String : " + randomString());
     }
 
 }

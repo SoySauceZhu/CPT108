@@ -36,6 +36,6 @@ public class Task2 {
     }
 
     private static List<Map<String, List<Long>>> getData() {
-        return new ArrayList<>(List.of(SortingHelper.ascending(), SortingHelper.descending(), SortingHelper.random(), SortingHelper.repeated(), SortingHelper.randomString()));
+        return new ArrayList<>(List.of(SortingHelper.ascending()));
     }
 }
