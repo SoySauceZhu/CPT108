@@ -179,12 +179,6 @@ public class SortingHelper {
             List<Integer> input = DataPre.randomList(num);
             System.out.println("Generated : scale of " + input.size());
 
-            try {
-                sorter.sort(input);
-            } catch (StackOverflowError e) {
-                System.out.println(e.getMessage());
-            }
-
         }
 
     }
@@ -197,12 +191,6 @@ public class SortingHelper {
             num = num + 1000000;
             List<Integer> input = DataPre.randomList(num);
             System.out.println("Generated : scale of " + input.size());
-
-            try {
-                sorter.sort(input);
-            } catch (StackOverflowError e) {
-                System.out.println(e.getMessage());
-            }
 
         }
 
@@ -217,12 +205,6 @@ public class SortingHelper {
             List<Integer> input = DataPre.ascendingList(num);
             System.out.println("Generated : scale of " + input.size());
 
-            try {
-                sorter.sort(input);
-            } catch (StackOverflowError e) {
-                System.out.println(e.getMessage());
-            }
-
         }
 
     }
@@ -235,12 +217,6 @@ public class SortingHelper {
             num = num * 2;
             List<Integer> input = DataPre.randomList(num);
             System.out.println("Generated : scale of " + input.size());
-
-            try {
-                sorter.sort(input);
-            } catch (StackOverflowError e) {
-                System.out.println(e.getMessage());
-            }
 
         }
 
