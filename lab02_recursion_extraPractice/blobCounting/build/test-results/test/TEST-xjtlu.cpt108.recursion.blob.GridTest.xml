@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="xjtlu.cpt108.recursion.blob.GridTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-22T10:23:11" hostname="DESKTOP-C7NKKQU" time="0.056">
+  <properties/>
+  <testcase name="gridCountBlobTest()" classname="xjtlu.cpt108.recursion.blob.GridTest" time="0.056"/>
+  <system-out><![CDATA[number of rows=7
+number of columns=12
+    +------------+
+    |012345678901|
++---+------------+
+|000|   **       |
+|001| ***    *   |
+|002|     *      |
+|003|  ****    **|
+|004|  ****      |
+|005|  *    *    |
+|006|        *   |
++---+------------+
+all count blob tests are passed!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
