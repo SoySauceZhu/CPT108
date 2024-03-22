@@ -9,7 +9,7 @@ Performance of four sorting methods are tested in this lab session, including bu
 ![](Ascending.png)
 
 
-Merge and Heap sort hold runtime complexity of $O(n log n)$ under any cases, showing a good and stable performance in different scenarios. 
+Merge and Heap sort hold runtime complexity of $O(n log n)$ under any cases, showing a good and stable performance in different scenarios. However, abnormally large amount of time is recorded in the process of heap sorting the data in the first trial, this error will be analyzed in later in the report. 
 
 Theoretically, bubble sorting under random case holds a complexity of $O(n^2)$. However, it leads to a complexity of $O(n)$ of bubble sort by giving the list of integers in ascending order already, as there is no need for swapping items when the list is already sorted.
 
@@ -42,13 +42,19 @@ Being compare with other input types, `String` is a reference type, requiring on
 
 When the scale of the input is quite small, the timing comparison between different sorting algorithms may not show significant differences, especially for simple algorithms like bubble sort and selection sort. This is because their time complexities are quadratic, meaning they have poor performance for large datasets but can perform relatively well on small datasets.
 
+Still, the amount of time of the first heap sorting process is pervert, it will be discussed in the following section.
+
 ![](Ascending2.png)
 ![](Descending2.png)
 ![](Random2.png)
 ![](Repeated2.png)
 ![](String2.png)
 
-### 6. Memory Consumption
+### 6.Error Analysis
+As mentioned before, heap sort shows an abnormal tendency of growth at the first trial process. After doing another experiment that invoking once `heapSort.sort()` as a pilot test before formally start recording the runtime and no longer observe abnormal data (seen in figure below), we determined a possible cause that the runtime is delayed due to dependency referencing or library import. 
+![](figure_1.png)
+
+### 7. Memory Consumption
 
 * Bubble Sort
 
@@ -73,6 +79,7 @@ In a binary tree, each value is stores in a node structure, what the sorting doe
 ```Java
 /* Generating different types of lists */
  
+/* Ascending Odd Integers */
 public static List<Integer> ascendingList(int num) {
     List<Integer> list = new ArrayList<>();
     for (int i = 0; i < num; i++) {
@@ -81,6 +88,7 @@ public static List<Integer> ascendingList(int num) {
     return list;
 }
 
+/* Descending Odd Integers */
 public static List<Integer> descendingList(int num) {
     List<Integer> list = new ArrayList<>();
     for (int i = 0; i < num; i++) {
@@ -100,6 +108,7 @@ public static List<Integer> randomList(int num) {
     return list;
 }
 
+/* Half of the items are 49, the rest is 51 */
 public static List<Integer> repeatedList(int num) {
     List<Integer> list = new ArrayList<>();
     Random random = new Random(42);

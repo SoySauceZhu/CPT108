@@ -1,0 +1,97 @@
+
+//
+// master configurations
+//
+ext {
+  // ---------------------------------------
+  // developer
+  developerId = 'Brian Lam'
+  developerName = 'H.-P. Lam (Brian)'
+  // developerEmail = 'ho.lam@xjtlu.edu.cn'
+  // ---------------------------------------
+  // license
+  // licenseName = 'GNU General Public License, Version 3.0'
+  // licenseUrl = 'https://www.gnu.org/licenses/lgpl-3.0.en.html'
+  // ---------------------------------------
+
+  // ---------------------------------------
+  // to publish relative to the current project folder
+  localMavenRepository = file("${rootDir}/../repositories/maven")
+  localIvyRepository = file("${rootDir}/../repositories/ivy")
+  snapshotsSuffix = 'snapshots'
+  // ---------------------------------------
+  localJavadocRepository = file("${rootDir}/../repositories/javadoc")
+  // ---------------------------------------
+  
+  // buildDir = layout.buildDirectory
+
+  configurationsPath = file("${rootDir}/../configurations")
+  docsPath = file("${rootDir}/../../../teaching-cpt108_2024spring/docs/laboratories")
+
+
+
+
+  titleForDocumentation = projectName + ' (version ' + archiveVersion + ')'
+  copyrightString = 'Copyright &#169; 2023&#8211;2024 ' + developerName + '. All Rights Reserved.'
+
+  distributionMavenRepositoriesPath = 'repositories/maven'
+  distributionJavadocRepositoriesPath = 'repositories/javadoc'
+
+
+
+  // gradle script for individual package
+
+}
+
+// apply settings and functions script if available
+if (project.hasProperty("settingsAndFunctionsScriptFile")) {
+  if (settingsAndFunctionsScriptFile.exists()) {
+    println("apply master settings and functions script")
+    apply from: settingsAndFunctionsScriptFile
+  }
+
+  // apply distribution script if available
+  if (packageScriptFile.exists()) {
+    println("apply package settings script")
+    apply from: packageScriptFile
+  }
+}
+
+// subprojects {
+//   task allDeps(type: DependencyReportTask) {}
+// }
+
+wrapper {
+  gradleVersion = '8.5'
+}
+
+task initProject() {
+  project.sourceSets*.allSource.srcDirTrees.flatten().dir.each { dir ->
+    dir.mkdirs()
+  }
+}
+
+if ( localMavenRepository.exists() ) {
+  println ("localMavenRepository folder exist")
+} else {
+  logger.error("localMavenRepository folder does not exist: ${localMavenRepository}", "error")
+}
+
+javadoc {
+  options.noQualifiers 'all'
+  options.encoding 'utf-8'
+  options.docEncoding 'utf-8'
+  options.charSet 'utf-8'
+
+  options.windowTitle(titleForDocumentation)
+  options.docTitle(titleForDocumentation)
+  options.footer(copyrightString)
+
+  options.showAll()
+  // options.setUse(true)
+  options.use true
+  options.author true
+  options.version true
+  options.linkSource true
+} 
+
