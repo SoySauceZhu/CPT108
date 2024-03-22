@@ -1,0 +1,31 @@
+: false
+a: true
+abc: false
+!This is not a palindrome!: false
+abcba: true
+abcdba: false
+bird rib: true
+	Never odd or even: true
+
+Race car: true
+%Eva, can I see bees in a cave?: true
+Step on no pets!: true
+12321: true
+90109: true
+90119: false
+1231: false
+: false
+a: true
+abc: false
+!This is not a palindrome!: false
+abcba: true
+abcdba: false
+bird rib: true
+Never odd or even: true
+Race car: true
+%Eva, can I see bees in a cave?: true
+Step on no pets!: true
+12321: true
+90109: true
+90119: false
+1231: false

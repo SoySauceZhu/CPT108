@@ -23,7 +23,7 @@ dependencies {
   // unit test
   testImplementation "org.junit.jupiter:junit-jupiter:${junitVersion}"
   testImplementation "org.junit.jupiter:junit-jupiter-params:${junitVersion}"
-  testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//  testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
   // logging
   testRuntimeOnly "org.apache.logging.log4j:log4j-core:${log4jVersion}"
