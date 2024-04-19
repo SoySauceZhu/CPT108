@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="xjtlu.cpt108.recursion.palindrome.PalindromeTest" tests="30" skipped="0" failures="0" errors="0" timestamp="2024-03-22T04:07:23" hostname="DESKTOP-C7NKKQU" time="0.636">
+<testsuite name="xjtlu.cpt108.recursion.palindrome.PalindromeTest" tests="30" skipped="0" failures="0" errors="0" timestamp="2024-03-23T15:08:27" hostname="DESKTOP-C7NKKQU" time="1.246">
   <properties/>
-  <testcase name="run #1 with [arguments=, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.13"/>
-  <testcase name="run #2 with [arguments=a, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
-  <testcase name="run #3 with [arguments=abc, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #4 with [arguments=This is not a palindrome!, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.014"/>
-  <testcase name="run #5 with [arguments=abcba, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.006"/>
-  <testcase name="run #6 with [arguments=abcdba, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
+  <testcase name="run #1 with [arguments=, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.172"/>
+  <testcase name="run #2 with [arguments=a, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.006"/>
+  <testcase name="run #3 with [arguments=abc, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
+  <testcase name="run #4 with [arguments=This is not a palindrome!, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.11"/>
+  <testcase name="run #5 with [arguments=abcba, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.046"/>
+  <testcase name="run #6 with [arguments=abcdba, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.024"/>
   <testcase name="run #7 with [arguments=bird rib, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.017"/>
   <testcase name="run #8 with [arguments=Never odd or even, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.008"/>
-  <testcase name="run #9 with [arguments=Race car, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.016"/>
+  <testcase name="run #9 with [arguments=Race car, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.017"/>
   <testcase name="run #10 with [arguments=Eva, can I see bees in a cave?, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.013"/>
-  <testcase name="run #11 with [arguments=Step on no pets!, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.011"/>
-  <testcase name="run #12 with [arguments=12321, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #13 with [arguments=90109, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.013"/>
-  <testcase name="run #14 with [arguments=90119, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.009"/>
-  <testcase name="run #15 with [arguments=1231, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.009"/>
-  <testcase name="run #1 with [arguments=, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.008"/>
-  <testcase name="run #2 with [arguments=a, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.003"/>
-  <testcase name="run #3 with [arguments=abc, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #4 with [arguments=This is not a palindrome!, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
-  <testcase name="run #5 with [arguments=abcba, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.022"/>
-  <testcase name="run #6 with [arguments=abcdba, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #7 with [arguments=bird rib, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
-  <testcase name="run #8 with [arguments=Never odd or even, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #9 with [arguments=Race car, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
-  <testcase name="run #10 with [arguments=Eva, can I see bees in a cave?, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.011"/>
-  <testcase name="run #11 with [arguments=Step on no pets!, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.009"/>
-  <testcase name="run #12 with [arguments=12321, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
-  <testcase name="run #13 with [arguments=90109, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.011"/>
-  <testcase name="run #14 with [arguments=90119, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.017"/>
-  <testcase name="run #15 with [arguments=1231, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
+  <testcase name="run #11 with [arguments=Step on no pets!, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
+  <testcase name="run #12 with [arguments=12321, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.047"/>
+  <testcase name="run #13 with [arguments=90109, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.014"/>
+  <testcase name="run #14 with [arguments=90119, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
+  <testcase name="run #15 with [arguments=1231, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.046"/>
+  <testcase name="run #1 with [arguments=, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
+  <testcase name="run #2 with [arguments=a, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
+  <testcase name="run #3 with [arguments=abc, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.013"/>
+  <testcase name="run #4 with [arguments=This is not a palindrome!, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.003"/>
+  <testcase name="run #5 with [arguments=abcba, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.003"/>
+  <testcase name="run #6 with [arguments=abcdba, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
+  <testcase name="run #7 with [arguments=bird rib, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.012"/>
+  <testcase name="run #8 with [arguments=Never odd or even, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.024"/>
+  <testcase name="run #9 with [arguments=Race car, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.067"/>
+  <testcase name="run #10 with [arguments=Eva, can I see bees in a cave?, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.012"/>
+  <testcase name="run #11 with [arguments=Step on no pets!, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.006"/>
+  <testcase name="run #12 with [arguments=12321, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
+  <testcase name="run #13 with [arguments=90109, true]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.005"/>
+  <testcase name="run #14 with [arguments=90119, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.007"/>
+  <testcase name="run #15 with [arguments=1231, false]" classname="xjtlu.cpt108.recursion.palindrome.PalindromeTest" time="0.004"/>
   <system-out><![CDATA[: false
 a: true
 abc: false
