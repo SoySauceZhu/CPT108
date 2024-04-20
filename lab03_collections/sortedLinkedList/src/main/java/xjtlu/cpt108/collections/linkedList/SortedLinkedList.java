@@ -2,13 +2,11 @@ package xjtlu.cpt108.collections.linkedList;
 
 public class SortedLinkedList implements SortedList {
 
-    private Node head;
-    private Node tail;
+    private final Node head;  // Using as final sentinel
     private int size;
 
     public SortedLinkedList() {
         head = new Node(Integer.MIN_VALUE);
-        tail = null;
         size = 0;
     }
 
@@ -31,15 +29,24 @@ public class SortedLinkedList implements SortedList {
         return sb.toString();
     }
 
+
+    /**
+     * Add a node with given value to the ordered SLList
+     *
+     * @param value Value of node to be added
+     * @return
+     */
     @Override
     public int add(int value) {
         Node ptr = head;
         int index = 0;
+        Node node = new Node(value);
+
+        // Compare with next value of pointer, if smaller than target then move forward
         while (ptr.getNext() != null && ptr.getNext().getData() < value) {
             ptr = ptr.getNext();
             index++;
         }
-        Node node = new Node(value);
         node.setNext(ptr.getNext());
         ptr.setNext(node);
 
@@ -47,10 +54,17 @@ public class SortedLinkedList implements SortedList {
         return index;
     }
 
+    /**
+     * Remove the node at given index
+     *
+     * @param ind index to be removed
+     * @return index of node removed
+     * @throws IllegalArgumentException if given index is invalid
+     */
     @Override
-    public int remove(int ind) throws IllegalArgumentException{
+    public int remove(int ind) throws IllegalArgumentException {
         if (ind >= size || ind < 0) {
-            throw new IllegalArgumentException("Index out of bound");
+            throw new IllegalArgumentException("Size should in range " + "(0, size]");
         }
 
         Node ptr = head;
@@ -63,23 +77,35 @@ public class SortedLinkedList implements SortedList {
         return ind;
     }
 
+    /**
+     * Remove the first node where the given value appears
+     *
+     * @param node Node contains the content to be removed
+     * @return int Index of the node removed; -1 if no such node
+     */
     @Override
     public int remove(Node node) {
-        int value = node.getData();
+        boolean existence = false;      // Whether expected node exist
         Node ptr = head;
-        int index = 0;
-        while (ptr.getNext() != null) {
-            index++;
-            if (ptr.getNext().getData() == value) {
+
+        int index;
+        for (index = 0; index < size; index++) {
+            // Ptr is where the index (head as 0) is
+
+            if (ptr.getNext().equals(node)) {
+                existence = true;
                 ptr.setNext(ptr.getNext().getNext());
-                size--;
-                index--;
                 break;
             }
             ptr = ptr.getNext();
         }
-        if (index >= size) index = -1;
-        return index;
+
+        if (existence) {
+            size--;
+            return index;
+        } else {
+            return -1;
+        }
     }
 
     @Override
@@ -94,18 +120,24 @@ public class SortedLinkedList implements SortedList {
 
     @Override
     public Node first() {
-        return null;
+        return head.getNext();
     }
 
     @Override
     public Node last() {
-        return null;
+        if (this.isEmpty()) return null;
+
+        Node ptr = head;
+        while (ptr.getNext() != null) {
+            ptr = ptr.getNext();
+        }
+        return ptr;
     }
 
     @Override
     public Node get(int ind) {
         if (ind > size) {
-            throw new IllegalArgumentException("Index out of bound: " + size);
+            throw new IllegalArgumentException("Index out of bound: " + size + ". Expected " + "[0, size)");
         }
 
         Node ptr = head.getNext();
@@ -118,7 +150,7 @@ public class SortedLinkedList implements SortedList {
     @Override
     public Node contains(int value) {
         Node ptr = head;
-        while (ptr.getNext()!=null) {
+        while (ptr.getNext() != null) {
             ptr = ptr.getNext();
             if (ptr.getData() == value) return ptr;
         }
@@ -127,7 +159,8 @@ public class SortedLinkedList implements SortedList {
 
     @Override
     public void clear() {
-
+        head.setNext(null);
+        size = 0;
     }
 
 }

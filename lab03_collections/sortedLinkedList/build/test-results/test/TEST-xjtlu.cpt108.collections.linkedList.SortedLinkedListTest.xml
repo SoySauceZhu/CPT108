@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="xjtlu.cpt108.collections.linkedList.SortedLinkedListTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-04-20T19:10:57" hostname="DESKTOP-C7NKKQU" time="0.101">
+  <properties/>
+  <testcase name="emptyListTest()" classname="xjtlu.cpt108.collections.linkedList.SortedLinkedListTest" time="0.008"/>
+  <testcase name="addTest()" classname="xjtlu.cpt108.collections.linkedList.SortedLinkedListTest" time="0.045"/>
+  <testcase name="sizeTest()" classname="xjtlu.cpt108.collections.linkedList.SortedLinkedListTest" time="0.02"/>
+  <testcase name="removeTest()" classname="xjtlu.cpt108.collections.linkedList.SortedLinkedListTest" time="0.02"/>
+  <system-out><![CDATA[SortedLinkedList (10): 
+  [ 0] 10
+  [ 1] 20
+  [ 2] 30
+  [ 3] 40
+  [ 4] 50
+  [ 5] 60
+  [ 6] 70
+  [ 7] 80
+  [ 8] 90
+  [ 9] 100
+0
+add(5)
+SortedLinkedList (11): 
+  [ 0] 5
+  [ 1] 10
+  [ 2] 20
+  [ 3] 30
+  [ 4] 40
+  [ 5] 50
+  [ 6] 60
+  [ 7] 70
+  [ 8] 80
+  [ 9] 90
+  [10] 100
+2
+add(15)
+SortedLinkedList (12): 
+  [ 0] 5
+  [ 1] 10
+  [ 2] 15
+  [ 3] 20
+  [ 4] 30
+  [ 5] 40
+  [ 6] 50
+  [ 7] 60
+  [ 8] 70
+  [ 9] 80
+  [10] 90
+  [11] 100
+12
+add(105)
+SortedLinkedList (13): 
+  [ 0] 5
+  [ 1] 10
+  [ 2] 15
+  [ 3] 20
+  [ 4] 30
+  [ 5] 40
+  [ 6] 50
+  [ 7] 60
+  [ 8] 70
+  [ 9] 80
+  [10] 90
+  [11] 100
+  [12] 105
+SortedLinkedList (10): 
+  [ 0] 10
+  [ 1] 20
+  [ 2] 30
+  [ 3] 40
+  [ 4] 50
+  [ 5] 60
+  [ 6] 70
+  [ 7] 80
+  [ 8] 90
+  [ 9] 100
+SortedLinkedList (13): 
+  [ 0] 5
+  [ 1] 10
+  [ 2] 15
+  [ 3] 20
+  [ 4] 30
+  [ 5] 40
+  [ 6] 50
+  [ 7] 60
+  [ 8] 70
+  [ 9] 80
+  [10] 90
+  [11] 100
+  [12] 105
+SortedLinkedList (12): 
+  [ 0] 5
+  [ 1] 10
+  [ 2] 15
+  [ 3] 20
+  [ 4] 40
+  [ 5] 50
+  [ 6] 60
+  [ 7] 70
+  [ 8] 80
+  [ 9] 90
+  [10] 100
+  [11] 105
+SortedLinkedList (10): 
+  [ 0] 10
+  [ 1] 20
+  [ 2] 30
+  [ 3] 40
+  [ 4] 50
+  [ 5] 60
+  [ 6] 70
+  [ 7] 80
+  [ 8] 90
+  [ 9] 100
+SortedLinkedList (9): 
+  [ 0] 10
+  [ 1] 20
+  [ 2] 40
+  [ 3] 50
+  [ 4] 60
+  [ 5] 70
+  [ 6] 80
+  [ 7] 90
+  [ 8] 100
+SortedLinkedList (8): 
+  [ 0] 10
+  [ 1] 20
+  [ 2] 40
+  [ 3] 60
+  [ 4] 70
+  [ 5] 80
+  [ 6] 90
+  [ 7] 100
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

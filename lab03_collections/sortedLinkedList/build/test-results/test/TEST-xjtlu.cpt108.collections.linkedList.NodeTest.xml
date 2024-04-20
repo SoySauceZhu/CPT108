@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="xjtlu.cpt108.collections.linkedList.NodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-19T04:32:44" hostname="DESKTOP-C7NKKQU" time="0.046">
+<testsuite name="xjtlu.cpt108.collections.linkedList.NodeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-20T19:10:57" hostname="DESKTOP-C7NKKQU" time="0.029">
   <properties/>
-  <testcase name="simpleNodeTest()" classname="xjtlu.cpt108.collections.linkedList.NodeTest" time="0.046"/>
+  <testcase name="simpleNodeTest()" classname="xjtlu.cpt108.collections.linkedList.NodeTest" time="0.029"/>
   <system-out><![CDATA[11
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
