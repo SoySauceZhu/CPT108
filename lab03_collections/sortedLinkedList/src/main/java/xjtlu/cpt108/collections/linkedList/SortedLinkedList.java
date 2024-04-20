@@ -1,5 +1,25 @@
 package xjtlu.cpt108.collections.linkedList;
 
+
+import java.util.LinkedList;
+
+/**
+ * Represents a sorted linked list data structure that stores integers.
+ * <p>
+ * The internal list structure is implemented by single linked list
+ * This class implement SortedList interface, providing methods to
+ * add, remove, and manipulate elements in the linked list of {@code int}.
+ * <p>
+ * Elements are stored in ascending order once they are added to the list,
+ * therefore no typical sorting algorithm is exploited.
+ * <p>There is a node {@code head} plays a role as sentinel.
+ * The index of real data stored in list starts from 0.
+ *
+ * @author Mingjie Zhu
+ * @see SortedList
+ * @version 0.0.2
+ */
+
 public class SortedLinkedList implements SortedList {
 
     private final Node head;  // Using as final sentinel
@@ -34,7 +54,7 @@ public class SortedLinkedList implements SortedList {
      * Add a node with given value to the ordered SLList
      *
      * @param value Value of node to be added
-     * @return
+     * @return int the index that the value is added
      */
     @Override
     public int add(int value) {
@@ -59,12 +79,13 @@ public class SortedLinkedList implements SortedList {
      *
      * @param ind index to be removed
      * @return index of node removed
-     * @throws IllegalArgumentException if given index is invalid
+     * @throws IllegalArgumentException if given index is out of bound
      */
     @Override
     public int remove(int ind) throws IllegalArgumentException {
         if (ind >= size || ind < 0) {
-            throw new IllegalArgumentException("Size should in range " + "(0, size]");
+            throw new IllegalArgumentException("Index out of bound " + ind
+                    + ". Expected: [0, " + size + ")");
         }
 
         Node ptr = head;
@@ -85,12 +106,15 @@ public class SortedLinkedList implements SortedList {
      */
     @Override
     public int remove(Node node) {
-        boolean existence = false;      // Whether expected node exist
+
+        // Whether expected node exist
+        boolean existence = false;
+
         Node ptr = head;
 
         int index;
         for (index = 0; index < size; index++) {
-            // Ptr is where the index (head as 0) is
+            // Ptr is where the index-1  is
 
             if (ptr.getNext().equals(node)) {
                 existence = true;
@@ -108,21 +132,41 @@ public class SortedLinkedList implements SortedList {
         }
     }
 
+    /**
+     * Return the size of SLList
+     *
+     * @return int size
+     */
     @Override
     public int size() {
         return size;
     }
 
+    /**
+     * Check if the list is empty
+     *
+     * @return true if the list is empty; false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**
+     * Return the first node of SLList
+     *
+     * @return Node The first node
+     */
     @Override
     public Node first() {
         return head.getNext();
     }
 
+    /**
+     * Return the last node of SLList
+     *
+     * @return Node The last node
+     */
     @Override
     public Node last() {
         if (this.isEmpty()) return null;
@@ -134,10 +178,19 @@ public class SortedLinkedList implements SortedList {
         return ptr;
     }
 
+    /**
+     * Return the i-th element of the list
+     *
+     * @param ind index of the element to be returned
+     * @return i-th element in the list; NULL if the list is empty
+     */
     @Override
     public Node get(int ind) {
+        if (size == 0) return null;
+
         if (ind > size) {
-            throw new IllegalArgumentException("Index out of bound: " + size + ". Expected " + "[0, size)");
+            throw new IllegalArgumentException("Index out of bound: "
+                    + ind + ". Expected " + "[0, " + size + ")");
         }
 
         Node ptr = head.getNext();
@@ -147,6 +200,12 @@ public class SortedLinkedList implements SortedList {
         return ptr;
     }
 
+    /**
+     * Determine if the list contains the input node
+     *
+     * @param value Vale of node to be checked
+     * @return The node contains the specified value; NULL otherwise
+     */
     @Override
     public Node contains(int value) {
         Node ptr = head;
@@ -157,6 +216,10 @@ public class SortedLinkedList implements SortedList {
         return null;
     }
 
+    /**
+     * Clear the list.
+     * I.e., remove all element in the list
+     */
     @Override
     public void clear() {
         head.setNext(null);

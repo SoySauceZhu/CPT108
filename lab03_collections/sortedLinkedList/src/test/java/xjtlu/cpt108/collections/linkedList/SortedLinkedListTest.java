@@ -7,6 +7,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.LinkedList;
+
 public class SortedLinkedListTest {
 
 	private static void print(String label, Object... objects) {

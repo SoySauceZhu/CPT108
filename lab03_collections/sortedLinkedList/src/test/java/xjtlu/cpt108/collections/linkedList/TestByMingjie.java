@@ -108,7 +108,7 @@ public class TestByMingjie {
     public void testGet() {
         // Test get method
         sortedList = new SortedLinkedList();
-        assertNull(sortedList.get(0));
+        assertNull(sortedList.get(13));
         sortedList.add(5);
         sortedList.add(3);
         sortedList.add(7);
