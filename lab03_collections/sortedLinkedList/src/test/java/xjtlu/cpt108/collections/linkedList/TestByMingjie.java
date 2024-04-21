@@ -33,31 +33,39 @@ public class TestByMingjie {
     public void testRemoveByIndex() {
         // Add elements to the list and then remove them by index
         sortedList = new SortedLinkedList();
-        sortedList.add(5);
-        sortedList.add(3);
+//        assertEquals(-1, sortedList.remove(0));
+        sortedList.add(9);
+        sortedList.add(8);
         sortedList.add(7);
-        assertEquals(3, sortedList.size());
-        assertEquals(1, sortedList.remove(1)); // Remove the element at index 1
-        assertEquals(2, sortedList.size());
-        assertEquals(3, sortedList.first().getData());
-        assertEquals(7, sortedList.last().getData());
+        sortedList.add(18);
+        sortedList.add(21);
+        sortedList.add(12);
+        assertEquals(6, sortedList.size());
+        assertEquals(5, sortedList.remove(5));
+        assertEquals(5, sortedList.size());
+        assertEquals(7, sortedList.first().getData());
+        assertEquals(18, sortedList.last().getData());
+        assertEquals(4, sortedList.remove(4));
+        assertEquals(12, sortedList.last().getData());
     }
 
     @Test
     public void testRemoveByNode() {
         // Add elements to the list and then remove them by node
         sortedList = new SortedLinkedList();
-        Node node1 = new Node(5);
-        Node node2 = new Node(3);
-        Node node3 = new Node(7);
-        sortedList.add(node1.getData());
-        sortedList.add(node2.getData());
-        sortedList.add(node3.getData());
-        assertEquals(3, sortedList.size());
-        assertEquals(0, sortedList.remove(node2)); // Remove node2
-        assertEquals(2, sortedList.size());
-        assertEquals(5, sortedList.first().getData());
-        assertEquals(7, sortedList.last().getData());
+        assertEquals(-1, sortedList.remove(new Node(21)));
+        sortedList.add(9);
+        sortedList.add(8);
+        sortedList.add(7);
+        sortedList.add(18);
+        sortedList.add(21);
+        sortedList.add(12);
+        assertEquals(6, sortedList.size());
+        assertEquals(5, sortedList.remove(new Node(21))); // Remove node2
+        assertEquals(5, sortedList.size());
+        assertEquals(-1, sortedList.remove(new Node(10)));
+        assertEquals(7, sortedList.first().getData());
+        assertEquals(18, sortedList.last().getData());
     }
 
     @Test
@@ -100,8 +108,12 @@ public class TestByMingjie {
         sortedList = new SortedLinkedList();
         assertNull(sortedList.last());
         sortedList.add(5);
-        sortedList.add(3);
-        assertEquals(5, sortedList.last().getData());
+        sortedList.add(6);
+        sortedList.add(9);
+        sortedList.add(10);
+        sortedList.add(21);
+        sortedList.add(18);
+        assertEquals(new Node(21), sortedList.last());
     }
 
     @Test

@@ -1,8 +1,6 @@
 package xjtlu.cpt108.collections.linkedList;
 
 
-import java.util.LinkedList;
-
 /**
  * Represents a sorted linked list data structure that stores integers.
  * <p>
@@ -12,21 +10,25 @@ import java.util.LinkedList;
  * <p>
  * Elements are stored in ascending order once they are added to the list,
  * therefore no typical sorting algorithm is exploited.
- * <p>There is a node {@code head} plays a role as sentinel.
- * The index of real data stored in list starts from 0.
+ * <p>There is a node {@code head} plays a role as sentinel, it doesn't store data.
+ * The index of real data stored in list starts from 0, which is {@code head.getNext()}.
+ * <p>GitHub repo
  *
  * @author Mingjie Zhu
+ * @see <a href="https://github.com/SoySauceZhu/CPT108">GitHub repo: CPT108</a>
  * @see SortedList
- * @version 0.0.2
+ * @version 0.0.3
  */
 
 public class SortedLinkedList implements SortedList {
 
     private final Node head;  // Using as final sentinel
+    private Node tail;
     private int size;
 
     public SortedLinkedList() {
         head = new Node(Integer.MIN_VALUE);
+        tail = null;
         size = 0;
     }
 
@@ -67,6 +69,10 @@ public class SortedLinkedList implements SortedList {
             ptr = ptr.getNext();
             index++;
         }
+
+        if (ptr.getNext() == null) {
+            tail = node;
+        }
         node.setNext(ptr.getNext());
         ptr.setNext(node);
 
@@ -83,6 +89,9 @@ public class SortedLinkedList implements SortedList {
      */
     @Override
     public int remove(int ind) throws IllegalArgumentException {
+        if (size == 0) {
+            throw new IllegalArgumentException("Sorted list is null, no node can be removed");
+        }
         if (ind >= size || ind < 0) {
             throw new IllegalArgumentException("Index out of bound " + ind
                     + ". Expected: [0, " + size + ")");
@@ -93,6 +102,9 @@ public class SortedLinkedList implements SortedList {
             ptr = ptr.getNext();
         }
 
+        if (ptr.getNext().getNext() == null) {
+            tail = ptr;
+        }
         ptr.setNext(ptr.getNext().getNext());
         size--;
         return ind;
@@ -106,17 +118,21 @@ public class SortedLinkedList implements SortedList {
      */
     @Override
     public int remove(Node node) {
-
-        // Whether expected node exist
-        boolean existence = false;
+        // Check existence, make the best complexity Omega(1)
+        if (this.isEmpty() || node.getData() > tail.getData()
+                || node.getData() < head.getNext().getData()) {
+            return -1;
+        }
 
         Node ptr = head;
+        boolean existence = false;
 
         int index;
         for (index = 0; index < size; index++) {
-            // Ptr is where the index-1  is
-
             if (ptr.getNext().equals(node)) {
+                if (ptr.getNext().getNext() == null) {
+                    tail = ptr;
+                }
                 existence = true;
                 ptr.setNext(ptr.getNext().getNext());
                 break;
@@ -165,17 +181,12 @@ public class SortedLinkedList implements SortedList {
     /**
      * Return the last node of SLList
      *
-     * @return Node The last node
+     * @return Node The last node; NULL otherwise.
      */
     @Override
     public Node last() {
         if (this.isEmpty()) return null;
-
-        Node ptr = head;
-        while (ptr.getNext() != null) {
-            ptr = ptr.getNext();
-        }
-        return ptr;
+        return tail;
     }
 
     /**
@@ -201,13 +212,17 @@ public class SortedLinkedList implements SortedList {
     }
 
     /**
-     * Determine if the list contains the input node
+     * Determine if the list contains the node with input value
      *
      * @param value Vale of node to be checked
      * @return The node contains the specified value; NULL otherwise
      */
     @Override
     public Node contains(int value) {
+        // This make the best complexity Omega(1)
+        if (this.isEmpty() || value < head.getNext().getData()
+                || value > tail.getData()) return null;
+
         Node ptr = head;
         while (ptr.getNext() != null) {
             ptr = ptr.getNext();

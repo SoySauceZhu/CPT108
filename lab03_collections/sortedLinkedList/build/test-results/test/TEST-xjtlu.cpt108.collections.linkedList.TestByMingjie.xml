@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="xjtlu.cpt108.collections.linkedList.TestByMingjie" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-20T19:50:47" hostname="DESKTOP-C7NKKQU" time="0.031">
+<testsuite name="xjtlu.cpt108.collections.linkedList.TestByMingjie" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-21T07:17:16" hostname="DESKTOP-C7NKKQU" time="0.037">
   <properties/>
-  <testcase name="testGet()" classname="xjtlu.cpt108.collections.linkedList.TestByMingjie" time="0.031"/>
+  <testcase name="testRemoveByIndex()" classname="xjtlu.cpt108.collections.linkedList.TestByMingjie" time="0.037"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
